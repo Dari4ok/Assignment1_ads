@@ -13,9 +13,9 @@ public class Problems {
         return min;
     }
 
-    public static int problem_2(int n, List<Integer> l2){
+    public static double problem_2(int n, List<Integer> l2){
 
-        int average = 0;
+        double average = 0;
 
         for(int i = 0; i < n; i++){
             average += l2.get(i);
@@ -39,6 +39,14 @@ public class Problems {
         i++;
 
         return problem_3(n);
+    }
+
+
+    public static int problem_4(int n){
+
+        if (n == 0) return 1;
+
+        return n * problem_4(n-1);
     }
 
 }

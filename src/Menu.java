@@ -20,6 +20,8 @@ public class Menu {
                         task2();
                     case 3:
                         task3();
+                    case 4:
+                        task4();
                 }
             case 2:
                 Main.main(new String[]{""});
@@ -68,7 +70,14 @@ public class Menu {
         }
 
         System.out.println("Output:");
+
+        double start_time = System.nanoTime();
+
         System.out.println(Problems.problem_1(n,l1));
+
+        double end_time = System.nanoTime();
+
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         repeat(1);
     }
@@ -92,8 +101,13 @@ public class Menu {
             l1.add(i, k);
         }
 
-        System.out.println("Output:");
+        double start_time = System.nanoTime();
+
         System.out.println(Problems.problem_2(n,l1));
+
+        double end_time = System.nanoTime();
+
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         repeat(2);
     }
@@ -106,11 +120,40 @@ public class Menu {
 
         System.out.println("Enter the number:");
         int n = scn.nextInt();
+
         System.out.println("Output:");
+
+        double start_time = System.nanoTime();
+
         System.out.println(Problems.problem_3(n));
+
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         Problems.i = 2;
 
         repeat(3);
     }
+
+    public static void task4(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("--------------------");
+        System.out.println(problemsList(4));
+        System.out.println("--------------------");
+
+        System.out.println("Enter the number:");
+        int n = scn.nextInt();
+
+        System.out.println("Output:");
+
+        double start_time = System.nanoTime();
+
+        System.out.println(Problems.problem_4(n));
+
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+        repeat(4);
+    }
+
 }

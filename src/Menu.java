@@ -10,17 +10,23 @@ public class Menu {
         System.out.println("Do you want repeat?\n1.Repeat\n2.Back to main\n0.Exit");
         int Q = scn.nextInt();
         switch (Q){
+            case 0:
+                System.exit(0);
             case 1:
                 switch (pn){
                     case 1:
                         task1();
-
+                    case 2:
+                        task2();
+                    case 3:
+                        task3();
                 }
             case 2:
                 Main.main(new String[]{""});
                 break;
-            case 0:
-                break;
+            default:
+                System.out.println("Unexpected value: " + Q);
+                repeat(pn);
         }
 
     }
@@ -52,7 +58,7 @@ public class Menu {
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
-        List<Integer> l1 = new ArrayList<Integer>();
+        List<Integer> l1 = new ArrayList<>();
 
         System.out.println("Enter the list:");
 
@@ -70,16 +76,14 @@ public class Menu {
     public static void task2(){
         Scanner scn = new Scanner(System.in);
         System.out.println("--------------------");
-
         System.out.println(problemsList(2));
-
         System.out.println("--------------------");
 
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
 
-        List<Integer> l1 = new ArrayList<Integer>();
+        List<Integer> l1 = new ArrayList<>();
 
         System.out.println("Enter the list:");
 
@@ -92,5 +96,21 @@ public class Menu {
         System.out.println(Problems.problem_2(n,l1));
 
         repeat(2);
+    }
+
+    public static void task3(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("--------------------");
+        System.out.println(problemsList(3));
+        System.out.println("--------------------");
+
+        System.out.println("Enter the number:");
+        int n = scn.nextInt();
+        System.out.println("Output:");
+        System.out.println(Problems.problem_3(n));
+
+        Problems.i = 2;
+
+        repeat(3);
     }
 }

@@ -19,6 +19,8 @@ public class Main {
                 Menu.task4();
             case 5:
                 Menu.task5();
+            case 6:
+                Menu.task6();
         }
 
     }

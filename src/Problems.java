@@ -55,4 +55,9 @@ public class Problems {
         return problem_5(n-1) + problem_5(n-2);
     }
 
+    public static int problem_6(int a, int n, int s){
+        if (n == 1) return a;
+        return problem_6(a*s, n - 1, s);
+    }
+
 }

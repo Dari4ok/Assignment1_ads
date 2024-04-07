@@ -60,4 +60,36 @@ public class Problems {
         return problem_6(a*s, n - 1, s);
     }
 
+    public static int[] problem_7(int n, int[] l1, int[] res, int i){
+        if(n == 0) return res;
+        res[i] = l1[n-1];
+        return problem_7(n - 1, l1, res, i + 1);
+    }
+
+    public static String problem_8(String a, int i){
+
+        if (i == a.length()) return "No";
+
+        if (Character.isDigit(a.charAt(i))) {
+
+            return "Yes";
+        }
+
+        return problem_8(a, i + 1);
+    }
+
+    public static int problem_9(int n, int k){
+        if(k == 0 || k == n) return 1;
+
+        return problem_9(n-1, k-1) + problem_9(n - 1, k);
+    }
+
+    public static int problem_10(int n, int k){
+        if (k == 0){
+            return n;
+        }
+
+        return problem_10(k, n % k);
+    }
+
 }

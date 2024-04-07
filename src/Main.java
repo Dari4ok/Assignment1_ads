@@ -8,7 +8,7 @@ public class Main {
         int n = scn.nextInt();
 
 
-        switch (n){
+        switch (n) {
             case 1:
                 Menu.task1();
             case 2:
@@ -21,8 +21,16 @@ public class Main {
                 Menu.task5();
             case 6:
                 Menu.task6();
+            case 7:
+                Menu.task7();
+            case 8:
+                Menu.task8();
+            case 9:
+                Menu.task9();
+            case 10:
+                Menu.task10();
         }
 
-    }
+        }
 
 }

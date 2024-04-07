@@ -24,9 +24,8 @@ public class Problems {
         return average/n;
     }
 
-    public static int i = 2;
 
-    public static String problem_3(int n){
+    public static String problem_3(int n, int i){
         String output1 = "Prime";
         String output2 = "Composite";
 
@@ -38,7 +37,7 @@ public class Problems {
 
         i++;
 
-        return problem_3(n);
+        return problem_3(n, i);
     }
 
 

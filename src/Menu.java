@@ -138,12 +138,11 @@ public class Menu {
 
         double start_time = System.nanoTime();
 
-        System.out.println(Problems.problem_3(n));
+        System.out.println(Problems.problem_3(n , 2));
 
         double end_time = System.nanoTime();
         System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
-        Problems.i = 2;
 
         repeat(3);
     }

@@ -49,4 +49,10 @@ public class Problems {
         return n * problem_4(n-1);
     }
 
+    public static int problem_5(int n){
+        if (n == 1 || n == 2) return 1;
+
+        return problem_5(n-1) + problem_5(n-2);
+    }
+
 }

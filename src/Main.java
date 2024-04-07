@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +6,7 @@ public class Main {
 
         System.out.println("Hello! \nChoose are task(1-10):");
         int n = scn.nextInt();
+
 
         switch (n){
             case 1:
@@ -17,6 +17,8 @@ public class Main {
                 Menu.task3();
             case 4:
                 Menu.task4();
+            case 5:
+                Menu.task5();
         }
 
     }

@@ -7,6 +7,12 @@ public class Main {
         System.out.println("Hello! \nChoose are task(1-10):");
         int n = scn.nextInt();
 
+        System.out.println("--------------------");
+
+        System.out.println(Menu.problemsList(n));
+
+        System.out.println("--------------------");
+
 
         switch (n) {
             case 1:

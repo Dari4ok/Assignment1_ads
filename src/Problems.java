@@ -1,24 +1,22 @@
-import java.util.List;
-
 public class Problems {
 
-    public static int problem_1(int n, List<Integer> l1){
-        int min = 999999999;
-        for(int i = 0; i < n; i++){
-            if (l1.get(i) < min){
-                min = l1.get(i);
+    public static int problem_1(int n, int [] l1){
+        int min = l1[0];
+        for(int i = 1; i < n; i++){
+            if (l1[i] < min){
+                min = l1[i];
             }
         }
 
         return min;
     }
 
-    public static double problem_2(int n, List<Integer> l2){
+    public static double problem_2(int n, int [] l2){
 
         double average = 0;
 
         for(int i = 0; i < n; i++){
-            average += l2.get(i);
+            average += l2[i];
         }
 
         return average/n;
@@ -26,14 +24,14 @@ public class Problems {
 
 
     public static String problem_3(int n, int i){
-        String output1 = "Prime";
-        String output2 = "Composite";
+        String prime = "Prime";
+        String composite = "Composite";
 
-        if(n == 0 || n == 1) return output2;
+        if(n == 0 || n == 1) return composite;
 
-        if(n==i) return output1;
+        if(n==i) return prime;
 
-        if (n % i == 0) return output2;
+        if (n % i == 0) return composite;
 
         i++;
 
@@ -67,7 +65,8 @@ public class Problems {
 
     public static String problem_8(String a, int i){
 
-        if (i == a.length()) return "No";
+        if (i == a.length())
+            return "No";
 
         if (Character.isDigit(a.charAt(i))) {
 

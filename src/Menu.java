@@ -1,12 +1,12 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 
 public class Menu {
+
+    static Scanner scn = new Scanner(System.in);
+
     private static void repeat(int pn){
-        Scanner scn = new Scanner(System.in);
         System.out.println("--------------------");
         System.out.println("Do you want repeat?\n1.Repeat\n2.Back to main\n0.Exit");
         int Q = scn.nextInt();
@@ -14,6 +14,11 @@ public class Menu {
             case 0:
                 System.exit(0);
             case 1:
+                System.out.println("--------------------");
+
+                System.out.println(Menu.problemsList(pn));
+
+                System.out.println("--------------------");
                 switch (pn){
                     case 1:
                         task1();
@@ -34,7 +39,7 @@ public class Menu {
                     case 9:
                         task9();
                     case 10:
-                        //task10();
+                        task10();
                 }
             case 2:
                 Main.main(new String[]{""});
@@ -46,7 +51,7 @@ public class Menu {
 
     }
 
-    private static String problemsList(int n){
+    public static String problemsList(int n){
         String[] problems = {"You are given a number “n” and an array of “n” elements, \nwrite the function that returns minimum of them. ",
                 "You are given a number “n” and an array of “n” elements, \nwrite the function that returns average of them.",
                 "You are given a number “n”, write the function for checking whether“n” is prime.",
@@ -62,24 +67,16 @@ public class Menu {
     }
 
     public static void task1(){
-        Scanner scn = new Scanner(System.in);
-
-        System.out.println("--------------------");
-
-        System.out.println(problemsList(1));
-
-        System.out.println("--------------------");
-
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
-        List<Integer> l1 = new ArrayList<>();
+
+        int[] l1 = new int[n];
 
         System.out.println("Enter the list:");
 
         for (int i = 0; i < n; i++) {
-            int k = scn.nextInt();
-            l1.add(i, k);
+            l1[i] = scn.nextInt();
         }
 
         System.out.println("Output:");
@@ -96,22 +93,16 @@ public class Menu {
     }
 
     public static void task2(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(2));
-        System.out.println("--------------------");
-
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
 
-        List<Integer> l1 = new ArrayList<>();
+        int[] l1 = new int[n];
 
         System.out.println("Enter the list:");
 
         for (int i = 0; i < n; i++) {
-            int k = scn.nextInt();
-            l1.add(i, k);
+            l1[i] = scn.nextInt();
         }
 
         double start_time = System.nanoTime();
@@ -126,11 +117,6 @@ public class Menu {
     }
 
     public static void task3(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(3));
-        System.out.println("--------------------");
-
         System.out.println("Enter the number:");
         int n = scn.nextInt();
 
@@ -148,11 +134,6 @@ public class Menu {
     }
 
     public static void task4(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(4));
-        System.out.println("--------------------");
-
         System.out.println("Enter the number:");
         int n = scn.nextInt();
 
@@ -169,11 +150,6 @@ public class Menu {
     }
 
     public static void task5(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(5));
-        System.out.println("--------------------");
-
         System.out.println("Enter the number:");
         int n = scn.nextInt();
 
@@ -190,11 +166,6 @@ public class Menu {
     }
 
     public static void task6(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(6));
-        System.out.println("--------------------");
-
         System.out.println("Enter the numbers:");
         int a = scn.nextInt();
         int n = scn.nextInt();
@@ -212,14 +183,6 @@ public class Menu {
     }
 
     public static void task7(){
-        Scanner scn = new Scanner(System.in);
-
-        System.out.println("--------------------");
-
-        System.out.println(problemsList(7));
-
-        System.out.println("--------------------");
-
         System.out.println("Enter the size List:");
 
         int n = scn.nextInt();
@@ -247,11 +210,6 @@ public class Menu {
     }
 
     public static void task8(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(8));
-        System.out.println("--------------------");
-
         System.out.println("Enter the String:");
         String a = scn.nextLine();
 
@@ -268,11 +226,6 @@ public class Menu {
     }
 
     public static void task9(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(9));
-        System.out.println("--------------------");
-
         System.out.println("Enter the numbers:");
         int n = scn.nextInt();
         int k = scn.nextInt();
@@ -290,11 +243,6 @@ public class Menu {
     }
 
     public static void task10(){
-        Scanner scn = new Scanner(System.in);
-        System.out.println("--------------------");
-        System.out.println(problemsList(10));
-        System.out.println("--------------------");
-
         System.out.println("Enter the numbers:");
         int n = scn.nextInt();
         int k = scn.nextInt();

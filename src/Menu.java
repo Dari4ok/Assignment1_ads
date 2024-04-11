@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -200,9 +199,13 @@ public class Menu {
 
         double start_time = System.nanoTime();
 
-        System.out.println(Arrays.toString(Problems.problem_7(n, l1, res, 0)));
+        int[] l2 = Problems.problem_7(n, l1, res, 0);
 
         double end_time = System.nanoTime();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(l2[i] + " ");
+        }
 
         System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 

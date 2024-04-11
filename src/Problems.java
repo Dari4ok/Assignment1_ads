@@ -58,7 +58,8 @@ public class Problems {
     }
 
     public static int[] problem_7(int n, int[] l1, int[] res, int i){
-        if(n == 0) return res;
+        if(n == 0)
+            return res;
         res[i] = l1[n-1];
         return problem_7(n - 1, l1, res, i + 1);
     }

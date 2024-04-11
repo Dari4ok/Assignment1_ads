@@ -91,4 +91,16 @@ public class Problems {
         return problem_10(k, n % k);
     }
 
+    public static boolean problem_11(String a, int i, int n){
+        if (i == n || (i + 1 == n && a.length()%2 == 0)){
+            return true;
+        }
+
+        if (a.charAt(i) != a.charAt(n)){
+            return false;
+        }
+
+        return problem_11(a, i + 1, n - 1);
+    }
+
 }

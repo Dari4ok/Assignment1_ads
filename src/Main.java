@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
-        System.out.println("Hello! \nChoose are task(1-10):");
+        System.out.println("Hello! \nChoose are task(1-11):");
         int n = scn.nextInt();
 
         System.out.println("--------------------");
@@ -35,6 +35,8 @@ public class Main {
                 Menu.task9();
             case 10:
                 Menu.task10();
+            case 11:
+                Menu.task11();
         }
 
         }

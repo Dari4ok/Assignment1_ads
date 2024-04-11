@@ -39,6 +39,8 @@ public class Menu {
                         task9();
                     case 10:
                         task10();
+                    case 11:
+                        task11();
                 }
             case 2:
                 Main.main(new String[]{""});
@@ -60,7 +62,8 @@ public class Menu {
                 "You are given a number “n” and an array of “n” elements, write the program that \nreturns given array in reverse order without using array data structure.",
                 "You are given a string “s”, write the function for checking whether “s” is all consists of digits.",
                 "You are given numbers“n” and “k”,write the program that finds Cnk(binomial coefficient) using formula Cnk=Cn−1 k−1+Cn−1 k where Cn 0=Cn n=1.",
-                "You are given “a” and “b”, write the function for finding GCD(a, b) using recursion. (Hint: Euclidean Algorithm)"};
+                "You are given “a” and “b”, write the function for finding GCD(a, b) using recursion. (Hint: Euclidean Algorithm)",
+                "Defence task, Palindrome"};
 
         return problems[n-1];
     }
@@ -261,6 +264,24 @@ public class Menu {
         System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
 
         repeat(10);
+    }
+
+    public static void task11(){
+        System.out.println("Enter the String");
+        String a = scn.next();
+
+        a = a.toLowerCase();
+
+        System.out.println("Output:");
+
+        double start_time = System.nanoTime();
+
+        System.out.println(Problems.problem_11(a, 0, a.length() - 1));
+
+        double end_time = System.nanoTime();
+        System.out.println("\nTime taken: " + (end_time - start_time)/1000000 + " ms");
+
+        repeat(11);
     }
 
 }

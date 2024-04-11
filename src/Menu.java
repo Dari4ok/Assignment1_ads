@@ -214,7 +214,8 @@ public class Menu {
 
     public static void task8(){
         System.out.println("Enter the String:");
-        String a = scn.nextLine();
+
+        String a = scn.next();
 
         System.out.println("Output:");
 
